@@ -2,6 +2,6 @@ FROM python:3.11
 
 WORKDIR /app
 
-COPY . .
+COPY . /app
 
 CMD ["python", "app.py"]
