@@ -1,0 +1,22 @@
+pipeline {
+    agent {
+        docker {
+            image 'node:18'
+        }
+    }
+
+    stages {
+        stage('Check Version') {
+            steps {
+                sh 'node -v'
+                sh 'npm -v'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building inside Node 18 container'
+            }
+        }
+    }
+}
